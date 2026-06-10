@@ -1,8 +1,15 @@
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+
 function App() {
 
   return (
     <>
-      <p className="text-red-500">Hello Word</p>
+      <Header />
+
+      <main className='py-10'>
+          <Hero />
+      </main>
     </>
   )
 }
