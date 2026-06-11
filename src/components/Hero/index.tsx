@@ -1,19 +1,20 @@
 import Banner from '@/assets/images/banner.jpg';
+import { Button } from '../Button';
 
 export const Hero = () => {
     return (
         <div className="container">
             <section className=" relative h-125 rounded-[20px] mb-10 overflow-hidden">
-                <img src={Banner} alt="Modelo usando tenis SyntaxeWare" className="w-full h-full object-cover" />
+                <img src={Banner} alt="Modelo usando tenis SyntaxeWare" className="w-full h-full object-cover object-[30%_center] md:object-center" />
 
-                <div className="absolute w-full bottom-0  flex justify-end items-center text-center px-6 md:px-24 pb-32">
-                    <div className=' text-white w-[388px] flex flex-col items-center'>
+                <div className="absolute w-full bottom-0  flex justify-end items-center text-center px-2 md:px-10 pb-20 sm:pb-32">
+                    <div className=' text-white w-97 flex flex-col items-center '>
                         <h2 className='text-xl font-medium leading-normal tracking-wide mb-2.5'>Kryoton One</h2>
                         <h1 className='text-2xl leading-9 tracking-widest mb-10'>Transforme qualquer passo em presença</h1>
 
                         <div className='flex gap-3.5'>
-                            <button>Ver Modelos</button>
-                            <button>Comprar</button>
+                            <Button variant='secondary' size='sm'>Ver Modelos</Button>
+                            <Button>Comprar</Button>
                         </div>
                     </div>
 
