@@ -51,3 +51,11 @@
 body {
     font-family: var(--font-display); 
 }
+
+.scroollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Edge */
+}
+
+.scroollbar-hide {
+    scrollbar-width: none; /* Firefox */
+}
