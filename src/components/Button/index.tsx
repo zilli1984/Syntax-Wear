@@ -15,7 +15,7 @@ export const Button = ({ children, variant = 'primary', size = 'md' } : ButtonPr
         size: {
             sm: 'px-5',
             md: 'px-8',
-            lg: 'px-10',
+            lg: 'px-14 py-4',
         },
     };
 
