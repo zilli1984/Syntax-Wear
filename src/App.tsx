@@ -1,7 +1,8 @@
-import { Categories } from './components/Categories';
-import { Gallery } from './components/Gallery';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
+import { Categories } from "./components/Categories"
+import { Footer } from "./components/Footer"
+import { Gallery } from "./components/Gallery"
+import { Header } from "./components/Header"
+import { Hero } from "./components/Hero"
 
 function App() {
 
@@ -9,11 +10,13 @@ function App() {
     <>
       <Header />
 
-      <main className='py-10'>
-          <Hero />
-          <Categories />
-          <Gallery />
+      <main className="pt-2 md:pt-10">
+        <Hero />
+        <Categories />
+        <Gallery />
       </main>
+
+      <Footer />
     </>
   )
 }
