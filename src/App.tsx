@@ -1,24 +1,23 @@
-import { Categories } from "./components/Categories"
-import { Footer } from "./components/Footer"
-import { Gallery } from "./components/Gallery"
-import { Header } from "./components/Header"
-import { Hero } from "./components/Hero"
+// Importações do TanStack Router para gerenciamento de rotas
+import { createRouter, RouterProvider } from "@tanstack/react-router"
+
+// Árvore de rotas gerada automaticamente com base na estrutura de arquivos em src/pages/
+import { routeTree } from "./router-tree-gen"
+
+// Cria a instância do roteador com todas as rotas definidas em routeTree
+const router = createRouter({ routeTree })
+
+// Registro do tipo do router no módulo do TanStack Router.
+// Isso habilita autocomplete e verificação de tipos nos links e hooks de rota (ex: useNavigate, Link)
+declare module "@tanstack/react-router" {
+  interface Register {
+    router: typeof router
+  }
+}
 
 function App() {
 
-  return (
-    <>
-      <Header />
-
-      <main className="pt-2 md:pt-10">
-        <Hero />
-        <Categories />
-        <Gallery />
-      </main>
-
-      <Footer />
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App

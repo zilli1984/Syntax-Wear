@@ -1,32 +1,53 @@
 {
+  // Configuração usada para compilar e validar o código da aplicação React.
   "compilerOptions": {
+    // Arquivo que guarda cache incremental para acelerar recompilações.
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    // JavaScript alvo compatível com navegadores modernos.
     "target": "ES2022",
+    // Mantém o comportamento padrão de classes do JavaScript.
     "useDefineForClassFields": true,
+    // Bibliotecas padrões disponíveis para o navegador.
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    // Usa módulos ESNext para trabalhar bem com Vite.
     "module": "ESNext",
+    // Tipos extras para o ambiente do Vite.
     "types": ["vite/client"],
+    // Pula checagem de tipos em libs externas para acelerar a análise.
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    // Modo bundler para integração com Vite.
     "moduleResolution": "bundler",
+    // Permite importar arquivos com extensão .ts/.tsx explícita.
     "allowImportingTsExtensions": true,
+    // Mantém a sintaxe dos módulos exatamente como escrita.
     "verbatimModuleSyntax": true,
+    // Detecta automaticamente se o código usa módulos.
     "moduleDetection": "force",
+    // Não gera saída em disco; o Vite cuida do build.
     "noEmit": true,
+    // Usa o runtime moderno do React JSX.
     "jsx": "react-jsx",
 
-    /* Linting */
+    // Regras rígidas para melhorar qualidade e segurança do código.
     "strict": true,
+    // Gera erro se houver variáveis declaradas e nunca usadas.
     "noUnusedLocals": true,
+    // Gera erro se houver parâmetros nunca usados.
     "noUnusedParameters": true,
+    // Evita sintaxes que podem não ser suportadas em versões futuras.
     "erasableSyntaxOnly": true,
+    // Exige tratamento explícito em casos de switch sem break.
     "noFallthroughCasesInSwitch": true,
+    // Impede imports sem uso com efeito colateral inesperado.
     "noUncheckedSideEffectImports": true
   },
+  // Base para resolver imports relativos.
   "baseUrl": ".",
+  // Alias para importar arquivos com @/.
   "paths": {
     "@/*": ["src/*"]
   },
+  // Pasta que deve ser incluída na checagem do TypeScript.
   "include": ["src"]
 }

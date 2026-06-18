@@ -1,7 +1,10 @@
 {
+  // Arquivo principal que organiza as referências para as configurações específicas.
   "files": [],
   "references": [
+    // Configuração usada para o código da aplicação React.
     { "path": "./tsconfig.app.json" },
+    // Configuração usada para arquivos de build e configuração do Vite.
     { "path": "./tsconfig.node.json" }
   ]
 }

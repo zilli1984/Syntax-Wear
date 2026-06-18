@@ -1,20 +1,31 @@
 {
+  // Configuração usada para arquivos que ficam fora da aplicação, como o Vite config.
   "compilerOptions": {
+    // Arquivo que guarda cache incremental para acelerar recompilações.
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    // Alvo mais recente para scripts de configuração e ferramentas.
     "target": "ES2023",
+    // Bibliotecas padrão do ambiente Node.
     "lib": ["ES2023"],
+    // Usa módulos ESNext para compatibilidade com o ambiente atual.
     "module": "ESNext",
+    // Tipos globais do Node.js.
     "types": ["node"],
+    // Pula checagem de tipos em libs externas para acelerar a análise.
     "skipLibCheck": true,
 
-    /* Bundler mode */
+    // Modo bundler para integração com ferramentas modernas.
     "moduleResolution": "bundler",
+    // Permite importar arquivos com extensão explícita.
     "allowImportingTsExtensions": true,
+    // Mantém a sintaxe dos módulos exatamente como escrita.
     "verbatimModuleSyntax": true,
+    // Detecta automaticamente se o código usa módulos.
     "moduleDetection": "force",
+    // Não gera saída em disco, porque o Vite cuida disso.
     "noEmit": true,
 
-    /* Linting */
+    // Regras rígidas para manter a configuração consistente.
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -22,5 +33,6 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
+  // Arquivo que deve ser verificado por essa configuração.
   "include": ["vite.config.ts"]
 }
