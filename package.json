@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
     "@tailwindcss/vite": "^4.1.17",
     "@tanstack/react-router": "^1.170.16",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "tailwindcss": "^4.1.17"
+    "react-hook-form": "^7.80.0",
+    "tailwindcss": "^4.1.17",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
