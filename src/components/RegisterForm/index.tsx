@@ -1,11 +1,10 @@
 import { useRegisterUserForm } from "./register-form.schema";
 
 export const RegisterForm = () => {
-    const { register, handleSubmit, errors } = useRegisterUserForm();
+    const { register, errors, isSubmitting } = useRegisterUserForm();
 
     return (
-        <form className="text-black p-10">
-
+        <form className="text-black">
             <div>
                 <label className="text-xs text-gray-600">First Name*</label>
                 <input className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.firstName ? "border-red-400 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433EB]"}`} type="text" {...register("firstName")} />
@@ -53,6 +52,10 @@ export const RegisterForm = () => {
                 <input className={`w-full border rounded-xs px-1 mt-1 focus:outline-none focus:ring-2 ${errors.confirmPassword ? "border-red-400 focus:ring-red-400" : "border-gray-300 focus:ring-[#5433EB]"}`} type="password" {...register("confirmPassword")} />
                 {errors.confirmPassword && <p className="text-xs text-red-600 mt-1">{errors.confirmPassword.message}</p>}
             </div>
+
+            <button disabled={isSubmitting} className="bg-[#5433EB] text-white font-semibold uppercase rounded-md py-3 transsition-all hover:bg-[#4028c7] disable:oppacity-50 w-full cursor-pointer mt-4">
+                {isSubmitting ? "Enviando..." : "Continuar"}
+            </button>
         </form>
     );
 };

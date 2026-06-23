@@ -11,8 +11,8 @@
 import { Route as rootRouteImport } from './pages/__root'
 import { Route as AppLayoutRouteImport } from './pages/_app/layout'
 import { Route as AppIndexRouteImport } from './pages/_app/index'
+import { Route as AuthSignUpRouteImport } from './pages/_auth/sign-up'
 import { Route as AuthSignInRouteImport } from './pages/_auth/sign-in'
-import { Route as AuthSiginUpRouteImport } from './pages/_auth/sigin-up'
 import { Route as AppProductsIndexRouteImport } from './pages/_app/products/index'
 
 const AppLayoutRoute = AppLayoutRouteImport.update({
@@ -24,14 +24,14 @@ const AppIndexRoute = AppIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AppLayoutRoute,
 } as any)
+const AuthSignUpRoute = AuthSignUpRouteImport.update({
+  id: '/_auth/sign-up',
+  path: '/sign-up',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AuthSignInRoute = AuthSignInRouteImport.update({
   id: '/_auth/sign-in',
   path: '/sign-in',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AuthSiginUpRoute = AuthSiginUpRouteImport.update({
-  id: '/_auth/sigin-up',
-  path: '/sigin-up',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppProductsIndexRoute = AppProductsIndexRouteImport.update({
@@ -42,42 +42,42 @@ const AppProductsIndexRoute = AppProductsIndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof AppIndexRoute
-  '/sigin-up': typeof AuthSiginUpRoute
   '/sign-in': typeof AuthSignInRoute
+  '/sign-up': typeof AuthSignUpRoute
   '/products/': typeof AppProductsIndexRoute
 }
 export interface FileRoutesByTo {
-  '/sigin-up': typeof AuthSiginUpRoute
   '/sign-in': typeof AuthSignInRoute
+  '/sign-up': typeof AuthSignUpRoute
   '/': typeof AppIndexRoute
   '/products': typeof AppProductsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_app': typeof AppLayoutRouteWithChildren
-  '/_auth/sigin-up': typeof AuthSiginUpRoute
   '/_auth/sign-in': typeof AuthSignInRoute
+  '/_auth/sign-up': typeof AuthSignUpRoute
   '/_app/': typeof AppIndexRoute
   '/_app/products/': typeof AppProductsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sigin-up' | '/sign-in' | '/products/'
+  fullPaths: '/' | '/sign-in' | '/sign-up' | '/products/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/sigin-up' | '/sign-in' | '/' | '/products'
+  to: '/sign-in' | '/sign-up' | '/' | '/products'
   id:
     | '__root__'
     | '/_app'
-    | '/_auth/sigin-up'
     | '/_auth/sign-in'
+    | '/_auth/sign-up'
     | '/_app/'
     | '/_app/products/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   AppLayoutRoute: typeof AppLayoutRouteWithChildren
-  AuthSiginUpRoute: typeof AuthSiginUpRoute
   AuthSignInRoute: typeof AuthSignInRoute
+  AuthSignUpRoute: typeof AuthSignUpRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -96,18 +96,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppLayoutRoute
     }
+    '/_auth/sign-up': {
+      id: '/_auth/sign-up'
+      path: '/sign-up'
+      fullPath: '/sign-up'
+      preLoaderRoute: typeof AuthSignUpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/_auth/sign-in': {
       id: '/_auth/sign-in'
       path: '/sign-in'
       fullPath: '/sign-in'
       preLoaderRoute: typeof AuthSignInRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_auth/sigin-up': {
-      id: '/_auth/sigin-up'
-      path: '/sigin-up'
-      fullPath: '/sigin-up'
-      preLoaderRoute: typeof AuthSiginUpRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/_app/products/': {
@@ -136,8 +136,8 @@ const AppLayoutRouteWithChildren = AppLayoutRoute._addFileChildren(
 
 const rootRouteChildren: RootRouteChildren = {
   AppLayoutRoute: AppLayoutRouteWithChildren,
-  AuthSiginUpRoute: AuthSiginUpRoute,
   AuthSignInRoute: AuthSignInRoute,
+  AuthSignUpRoute: AuthSignUpRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
