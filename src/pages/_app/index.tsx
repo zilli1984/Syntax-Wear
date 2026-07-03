@@ -9,7 +9,7 @@ export const Route = createFileRoute('/_app/')({
 
 function RouteComponent() {
   return (
-    <main className="pt-2 md:pt-10">
+    <main className="py-6">
       <Hero />
       <Categories />
       <Gallery />

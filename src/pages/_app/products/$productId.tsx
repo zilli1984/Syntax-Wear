@@ -2,7 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import { products } from '../../../mocks/products'
 import { formatCurrency } from '../../../utils/format-currency'
 import { useContext } from 'react'
-import { CartContext } from '../../../components/Context/CartContext'
+import { CartContext } from '../../../contexts/CartContext'
 
 export const Route = createFileRoute('/_app/products/$productId')({
     component: RouteComponent,

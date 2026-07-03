@@ -3,7 +3,7 @@ import { createRouter, RouterProvider } from "@tanstack/react-router"
 
 // Árvore de rotas gerada automaticamente com base na estrutura de arquivos em src/pages/
 import { routeTree } from "./router-tree-gen"
-import { CartProvider } from "./components/Context/CartProvider"
+import { CartProvider } from "./contexts/CartProvider"
 
 // Cria a instância do roteador com todas as rotas definidas em routeTree
 const router = createRouter({ routeTree })
