@@ -6,7 +6,7 @@ interface GalleryCardProps {
 
 export const GalleryCard = ({ src, className, children }: GalleryCardProps) => (
     <div className={`overflow-hidden rounded-[20px] relative ${className}`}>
-        <img src={src} className="w-full h-full object-cover" />
+        <img src={src} className="w-full h-full md:h-full object-cover object-[40%_center]" />
         {children && (
             <div className="absolute inset-0 flex justify-center items-center">
                 {children}

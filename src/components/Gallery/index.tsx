@@ -10,8 +10,8 @@ import { Overlay } from "../Overlay";
 
 export const Gallery = () => {
   return (
-    <section className='container grid grid-cols-12 gap-2.5 md:gap-7 mb-10 grid-rows-[200px_1fr_100px] md:grid-rows-none'>
-            <GalleryCard src={banner} className="col-span-12 md:col-span-6 row-span-3 order-1">
+    <section className='container grid grid-cols-12 gap-2.5 md:gap-7 grid-rows-[200px_1fr_100px] md:grid-rows-none'>
+            <GalleryCard src={banner} className="col-span-12 md:col-span-6 row-span-3 order-1 h-[495px] md:h-auto">
                 <Overlay
                     subtitle="Estilo urbano com atitude."
                     className="inset-0 justify-center items-center"
