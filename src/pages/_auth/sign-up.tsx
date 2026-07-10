@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { RegisterForm } from '../../components/RegisterForm'
 import { Logo } from '../../components/Logo'
-import { Separator } from '../../components'
+import { Separator } from '../../components/Separador'
 import GoogleIcon from '@/assets/images/google-icon.png'
 
 export const Route = createFileRoute('/_auth/sign-up')({

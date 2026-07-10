@@ -3,6 +3,7 @@ import { products } from '../../../mocks/products'
 import { formatCurrency } from '../../../utils/format-currency'
 import { useContext } from 'react'
 import { CartContext } from '../../../contexts/CartContext'
+import { ZIPForm } from '../../../components/ZIPForm'
 
 export const Route = createFileRoute('/_app/products/$productId')({
     component: RouteComponent,
@@ -57,10 +58,8 @@ function RouteComponent() {
                 <div className='mb-6'>
                     <p className='text-sm'>Calcular o prazo de entrega</p>
 
-                    <form className='flex gap-3'>
-                        <input type="text" placeholder='Insira seu Cep' className='border border-[#c0c0c0] rouded-md p-3' />
-                        <button className='bg-black text-white py-3 px-6 rounded-md cursor-pointer hover:bg-gray-800'>Calcular</button>
-                    </form>
+                <ZIPForm />
+
                 </div>
 
                 <button className='bg-black text-white p-5 px-6 rounded-md w-full cursor-pointer hover:bg-gray-800' onClick={() => add(filteredProduct) }>Adicionar ao carrinho</button>
