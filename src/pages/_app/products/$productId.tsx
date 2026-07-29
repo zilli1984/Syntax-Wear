@@ -17,7 +17,14 @@ function RouteComponent() {
 
     const filteredProduct = products.find(product => product.id === Number(productId));
 
-    if (!filteredProduct) return;
+    if (!filteredProduct) 
+        return(
+            <section className='container flex flex-col items-center justify-center text-black mb-15 pt-44 md:pt-54 pb-10 md:px-10 text-center min-h-[70vh]'>
+                <h1 className='text-3xl font-bold mb-4'>Produto não encontrado</h1>
+                <p className='mb-6'>O produto que você procura não existe ou foi removido</p>
+                <Link to={'/products'} className='text-accent hover:text-accent-hover hover:underline'>Volte para a aba produtos</Link>
+            </section>
+    );
 
     const originalPrice = filteredProduct?.price ?? 0;
     const discountPrice = originalPrice * 0.9;
