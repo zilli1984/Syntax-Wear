@@ -17,8 +17,8 @@ export const ProductCard = ({product} : ProductCardProps) => {
                 <img className="w-full max-h-[400px] object-cover rounded-md mb-2" src={product.image} alt={product.name} />
             </Link>
 
-            <div className="text-black rounded-2xl p-4">
-                <h3 className="text-lg font-semibold">{product.name}</h3>
+            <div className=" text-black text-start rounded-2xl p-4">
+                <h3 className=" text-start text-lg font-semibold">{product.name}</h3>
                 <p>{product.color}</p>
 
                 <div className="flex justify-between mt-2.5">

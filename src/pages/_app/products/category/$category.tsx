@@ -4,6 +4,13 @@ import { products } from "../../../../mocks/products";
 
 export const Route = createFileRoute("/_app/products/category/$category")({
   component: RouteComponent,
+    head: () => ({
+    meta: [
+      {
+        title: 'Produtos - SyntaxWear'
+      }
+    ]
+  })
 });
 
 function RouteComponent() {
@@ -33,7 +40,7 @@ function RouteComponent() {
         </>
       ) : (
         <>
-          <h2 className="text-center mb-10 p-4">
+          <h2 className="mb-10 p-4">
             Conforto Excepcional para as aventuras do dia-a-dia
           </h2>
           <ProductList products={filteredProducts} />
