@@ -23,10 +23,10 @@ function RouteComponent() {
         />
       </div>
       <div className="text-black px-8 py-16 lg:px-20 md:w-1/2 h-full flex flex-col justify-center">
-        <h2 className="text-5xl lg:text-6xl font-medium text-[#333333] mb-8">
+        <h2 className="text-5xl lg:text-6xl font-medium text-text mb-8">
           Sobre nós
         </h2>
-        <p className="text-lg text-[#666666] leading-relaxed mb-5">
+        <p className="text-lg text-text-secondary leading-relaxed mb-5">
           Somos apaixonados por calcados que unem estilo, conforto e
           durabilidade. Nossa missão? Fazer voce se sentir bem a cada passo,
           oferecendo uma experiencia de compra incrivele uma seleção de tênis,

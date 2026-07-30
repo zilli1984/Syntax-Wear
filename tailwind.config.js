@@ -25,6 +25,7 @@ export default {
         error: "hsl(0, 83%, 58%)",
         "footer-bg": "hsl(0, 0%, 20%)",
         "footer-hover": "hsl(0, 0%, 80%)",
+        warning: "hsl(359 100% 70%)",
       },
       fontFamily: {
         display: ["Ubuntu", "sans-serif"],

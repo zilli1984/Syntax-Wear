@@ -17,13 +17,13 @@ export const Route = createFileRoute("/_auth/sign-up")({
 
 function RouteComponent() {
   return (
-    <section className="min-h-screen w-full flex justify-center items-center bg-[#f5f5f5] p-20">
+    <section className="min-h-screen w-full flex justify-center items-center bg-surface p-20">
       <div className="w-[450px] bg-white rounded-2xl flex flex-col p-4">
         <Logo />
         <RegisterForm />
         <Separator />
 
-        <button className=" w-full flex item-center justify-center gap-2 border border-gray-300 rounded-md py-3 hover:bg-gray-50 transition cursor-pointer">
+        <button className=" w-full flex item-center justify-center gap-2 border border-border rounded-md py-3 hover:bg-gray-50 transition cursor-pointer">
           <img src={GoogleIcon} alt="Google icon" className="w-5 h-5" />
           <span className="text-sm font-medium text-black">
             Sign in with Google

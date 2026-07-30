@@ -45,7 +45,7 @@ export const ZIPForm = () => {
             type="text"
             placeholder="Insira seu Cep"
             maxLength={9}
-            className={`border rounded-md p-3 focus:outline-none focus:ring-2 ${errors.cep ? "border-red-400 focus:ring-red-400" : "border-[#c0c0c0] focus:ring-[#5433EB]"}`}
+            className={`border rounded-md p-3 focus:outline-none focus:ring-2 ${errors.cep ? "border-warning focus:ring-warning" : "border-border focus:ring-[#5433EB]"}`}
             {...register("cep")}
           />
           <button
@@ -57,13 +57,13 @@ export const ZIPForm = () => {
           </button>
         </div>
         {errors.cep && (
-          <p className="text-xs text-red-600 mt-1">{errors.cep.message}</p>
+          <p className="text-xs text-error mt-1">{errors.cep.message}</p>
         )}
       </form>
 
       {addressError && (
         <div className="mt-4 ">
-            <p className="text-red-600 text-sm">{addressError}</p>
+            <p className="text-error text-sm">{addressError}</p>
         </div>
       )}
 
