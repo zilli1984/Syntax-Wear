@@ -12,13 +12,13 @@ export const Hero = () => {
         <img
           src={Banner}
           alt="Homem sentado com os tênis da SyntaxWear"
-          className="w-full h-full object-cover rounded-[20px]"
+          className="w-full h-full object-cover object-[30%_center] md:object-center rounded-[20px]"
         />
 
         <Overlay
           title="Kripton One"
           subtitle="Transforme qualquer passo em presença"
-          className="bottom-0 px-6 md:px-24 pb-24 justify-end md:items-end"
+          className="botton-0 inset-0 pt-[100px] md:pt-0 md:justify-end md:pr-20"
         >
           <Button
             variant="secondary"

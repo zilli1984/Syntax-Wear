@@ -21,7 +21,7 @@ export const Gallery = () => {
         <Overlay
           title="Kripto one"
           subtitle="Estilo urbano com atitude."
-          className="inset-0 justify-center items-center"
+          className="inset-0 justify-center items-center pt-12"
         >
           <Button
             variant="secondary"

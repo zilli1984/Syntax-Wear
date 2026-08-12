@@ -40,7 +40,7 @@ export const Header = () => {
           </nav>
 
           <nav>
-            <ul className="flex gap-2 lg:gap-10 items-center">
+            <ul className="flex gap-2 lg:gap-10 items-center justify-center">
               <li className="hidden lg:block">
                 <Link to="/our-stores">Nossas Lojas</Link>
               </li>
