@@ -27,7 +27,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         localStorage.setItem(localStorageKey, JSON.stringify(cart))
     },[cart]);
 
-    function add(product: Product): void {
+    function addToCart(product: Product): void {
         const productExisInCart = cart.find(
             itemInCart => itemInCart.id === product.id
         );
@@ -46,15 +46,15 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         setCart(newCart)
     }
 
-    function remove(productId: number): void {
+    function removeFromCart(productId: number): void {
         setCart(cart.filter((itemInCart) => itemInCart.id !== productId));
     }
 
-    function increment(product: ProductCart): void {
+    function incrementInCart(product: ProductCart): void {
         updateProductQuantity(product, product.quantity + 1);
     }
 
-    function decrement(product: ProductCart): void {
+    function decrementInCart(product: ProductCart): void {
         updateProductQuantity(product, product.quantity - 1);
     }
 
@@ -77,10 +77,10 @@ export const CartProvider = ({ children }: CartProviderProps) => {
 
 return <CartContext.Provider value={{
     cart,
-    add,
-    remove,
-    increment,
-    decrement
+    addToCart,
+    removeFromCart,
+    incrementInCart,
+    decrementInCart
 
 }}>{children}</CartContext.Provider>
 }

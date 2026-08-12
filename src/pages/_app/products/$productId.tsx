@@ -23,7 +23,7 @@ export const Route = createFileRoute("/_app/products/$productId")({
 });
 
 function RouteComponent() {
-  const { add } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const { productId } = Route.useParams();
 
@@ -99,7 +99,7 @@ function RouteComponent() {
 
           <button
             className="bg-black text-white rounded-md p-5 w-full cursor-pointer hover:bg-gray-800"
-            onClick={() => add(filteredProduct)}
+            onClick={() => addToCart(filteredProduct)}
           >
             Adicionar ao carrinho
           </button>

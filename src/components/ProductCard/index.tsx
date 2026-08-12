@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 export const ProductCard = ({product} : ProductCardProps) => {
 
-    const { add } = useContext(CartContext)
+    const { addToCart } = useContext(CartContext)
     return (
         <div className="bg-white rounded-2xl shadow-md">
             <Link to="/products/$productId" params={{ productId: String(product.id) }}>
@@ -26,7 +26,7 @@ export const ProductCard = ({product} : ProductCardProps) => {
                         R${product.price},00
                     </p>
 
-                    <button className="cursor-pointer" onClick={() => add(product)}>
+                    <button className="cursor-pointer" onClick={() => addToCart(product)}>
                         <MdAddShoppingCart className="h-7 w-7" />
                     </button>
                 </div>
